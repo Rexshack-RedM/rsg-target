@@ -18,9 +18,9 @@ function FoundTarget(item) {
     if (item.data) {
         $("#target-eye").attr("class", item.data);
     } else {
-        $("#target-eye").attr("class", "fa-duotone fa-eye");  
+        $("#target-eye").attr("class", "fa-duotone fa-hat-cowboy");  
     }
-    $("#target-eye").css({"--fa-primary-color": "white", "--fa-secondary-color": "#e0161d", "--fa-secondary-opacity": "1.0"});
+    $("#target-eye").css({"--fa-primary-color": "white", "--fa-secondary-color": "#e28743", "--fa-secondary-opacity": "1.0"});
 }
 
 function OpenTarget() {
@@ -34,7 +34,7 @@ function OpenTarget() {
 function LeftTarget() {
     $(".target-label").html(""); 
 
-    $("#target-eye").attr("class", "fa-duotone fa-eye-low-vision");
+    $("#target-eye").attr("class", "fa-duotone fa-hat-cowboy-side");
 
     $("#target-eye").css("color", "white");
 }
@@ -43,7 +43,7 @@ function CloseTarget() {
     $(".target-label").html("");
     $("#target-eye").css("color", "white");
     $('.target-wrapper').hide();
-    $("#target-eye").attr("class", "fa-duotone fa-eye-low-vision");
+    $("#target-eye").attr("class", "fa-duotone fa-hat-cowboy-side");
 }
 
 function ValidTarget(item) {
@@ -51,7 +51,7 @@ function ValidTarget(item) {
     $.each(item.data, function(index, item) {
         $(".target-label").append("<div id='target-" + index + "'<li><span class='target-icon'><i class='" + item.icon + " 'style ='" + item.style + " '></i></span>&nbsp" + item.label + "</li></div>");
         $("#target-" + index).hover((e) => {
-            $("#target-" + index).css("color", e.type === "mouseenter" ? "rgb(224,22,29)" : "white")
+            $("#target-" + index).css("color", e.type === "mouseenter" ? "rgb(255, 128, 0)" : "white")
         })
 
         $("#target-" + index + "").css("margin-bottom", "1vh");
