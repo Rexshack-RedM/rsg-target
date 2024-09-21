@@ -3,7 +3,7 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 game 'rdr3'
 
 description 'rsg-target'
-version '1.0.5'
+version '1.0.6'
 
 ui_page 'html/index.html'
 
@@ -22,7 +22,8 @@ client_scripts {
 }
 
 server_scripts {
-    'server/server.lua'
+    'server/server.lua',
+    'server/versionchecker.lua'
 }
 
 files {
